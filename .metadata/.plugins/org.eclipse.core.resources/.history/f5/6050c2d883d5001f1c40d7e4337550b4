@@ -1,0 +1,17 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+
+public class labelexample extends JFrame implements ActionListener{
+	JTextField tf;
+	JLabel l;
+	JButton b;
+	lable
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

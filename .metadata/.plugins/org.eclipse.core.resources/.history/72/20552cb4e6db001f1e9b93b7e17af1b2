@@ -1,0 +1,47 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Listexample1 extends JFrame implements ActionListener {
+    JLabel label;
+    JButton b;
+    JList<String> list;
+
+    Listexample1() {
+        label = new JLabel();
+        b = new JButton("Show");
+        DefaultListModel<String> l1 = new DefaultListModel<>();
+        l1.addElement("C");
+        l1.addElement("C++");
+        l1.addElement("Java");
+        l1.addElement("PHP");
+        list = new JList<>(l1);
+        
+        // Layout Manager
+        setLayout(new FlowLayout());
+        
+        add(list);
+        add(b);
+        add(label);
+
+        setSize(300, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+
+        b.addActionListener(this);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        String data = "";
+        if (list.getSelectedIndex() != -1) {
+            data = "Programming language selected: " + list.getSelectedValue();
+            label.setText(data);
+        }
+    }
+
+    public static void main(String[] args) {
+        new Listexample1();
+    }
+}
+

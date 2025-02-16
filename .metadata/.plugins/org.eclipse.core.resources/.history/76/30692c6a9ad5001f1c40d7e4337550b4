@@ -1,0 +1,29 @@
+import javax.swing.*;
+import java.awt.event.*;
+public class TextFielddemo1 implements ActionListener 
+{
+	JTextField tf1,tf2,tf3;
+	JButton b1,b2;
+TextFielddemo1()
+{
+	tf1 = new JTextField();
+	tf1.setBounds(50, 100, 150, 20);
+	tf2 = new JTextField();
+	tf2.setBounds(50,100,150,20);
+	
+}
+
+	@Override
+public void actionPerformed(ActionEvent e) 
+	{
+	// TODO Auto-generated method stub
+	
+}
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+}
